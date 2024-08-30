@@ -45,7 +45,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  doc_url: https://github.com/E3SM-Project/mosaic/README.md
+  doc_url: https://docs.e3sm.org/mosaic/
   dev_url: https://github.com/E3SM-Project/mosaic/
 
 extra:
