@@ -11,7 +11,7 @@ Summary: Graphics package for MPAS meshes
 
 Development: https://github.com/E3SM-Project/mosaic/
 
-Documentation: https://github.com/E3SM-Project/mosaic/README.md
+Documentation: https://docs.e3sm.org/mosaic/
 
 Current build status
 ====================
@@ -149,7 +149,4 @@ Feedstock Maintainers
 
 * [@andrewdnolan](https://github.com/andrewdnolan/)
 * [@xylar](https://github.com/xylar/)
-
-
-<!-- dummy commit to enable rerendering -->
 
