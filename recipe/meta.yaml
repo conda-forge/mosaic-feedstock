@@ -1,5 +1,6 @@
 {% set name = "mosaic" %}
-{% set version = "0.2.0" %}
+{% set version = "1.0.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mosaic/archive/{{ version }}.tar.gz
-  sha256: c3c1bde8ae3e3169cbd26a6659d8618ac7520b308a040c428c59dfc53d6c637f
+  sha256: 8322e576eaa4f4ee020ad4ab133692e13838746a0c11051d93b4f240efe6d3a9
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
@@ -30,6 +31,7 @@ requirements:
     - pooch
     - pyproj
     - scipy
+    - shapely
     - tqdm
     - xarray
 
