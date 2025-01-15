@@ -1,5 +1,6 @@
 {% set name = "mosaic" %}
 {% set version = "1.0.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -30,6 +31,7 @@ requirements:
     - pooch
     - pyproj
     - scipy
+    - shapely
     - tqdm
     - xarray
 
