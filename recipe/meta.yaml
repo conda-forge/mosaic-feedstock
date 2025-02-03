@@ -1,5 +1,5 @@
 {% set name = "mosaic" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mosaic/archive/{{ version }}.tar.gz
-  sha256: 8322e576eaa4f4ee020ad4ab133692e13838746a0c11051d93b4f240efe6d3a9
+  sha256: e6be22ad41dab6c5b32b6727510e16f38087ac2e508b9bddae2866f3da5aa0c6
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
