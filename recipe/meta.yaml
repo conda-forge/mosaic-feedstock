@@ -1,5 +1,5 @@
 {% set name = "mosaic" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mosaic/archive/{{ version }}.tar.gz
-  sha256: e6be22ad41dab6c5b32b6727510e16f38087ac2e508b9bddae2866f3da5aa0c6
+  sha256: d0aaa7d12e0e68fef8b8acededf77d56e97f488fae32cce70770f74f42f897d8
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
@@ -22,7 +22,7 @@ requirements:
     - setuptools >=60
   run:
     - python >={{ python_min }}
-    - cartopy
+    - cartopy <=0.24.0
     - cmocean
     - h5netcdf
     - netcdf4
