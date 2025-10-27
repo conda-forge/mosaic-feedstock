@@ -22,7 +22,7 @@ requirements:
     - setuptools >=60
   run:
     - python >={{ python_min }}
-    - cartopy
+    - cartopy <=0.24.0
     - cmocean
     - h5netcdf
     - netcdf4
