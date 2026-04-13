@@ -1,0 +1,59 @@
+schema_version: 1
+
+context:
+  name: mosaic
+  version: 1.2.1
+  python_min: 3.10
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/E3SM-Project/mosaic/archive/${{ version }}.tar.gz
+  sha256: 1988ed4c4202f14b9fb558cbc9c3010c3283b8a604ce57fbbfa9566d6713e944
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
+
+requirements:
+  host:
+    - python 3.10.*
+    - pip
+    - setuptools >=60
+  run:
+    - python >=${{ python_min }}
+    - cartopy <=0.24.0
+    - cmocean
+    - h5netcdf
+    - netcdf4
+    - matplotlib-base
+    - numpy
+    - pooch
+    - pyproj
+    - scipy
+    - shapely
+    - tqdm
+    - xarray
+
+tests:
+  - python:
+      imports:
+        - mosaic
+      pip_check: true
+
+      python_version: ${{ python_min }}.*
+about:
+  summary: Graphics package for MPAS meshes
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/E3SM-Project/mosaic/
+  repository: https://github.com/E3SM-Project/mosaic/
+  documentation: https://docs.e3sm.org/mosaic/
+
+extra:
+  recipe-maintainers:
+    - andrewdnolan
+    - xylar
