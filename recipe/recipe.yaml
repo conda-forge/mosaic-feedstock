@@ -2,8 +2,7 @@ schema_version: 1
 
 context:
   name: mosaic
-  version: 1.2.1
-  python_min: 3.10
+  version: "1.2.1"
 
 package:
   name: ${{ name|lower }}
