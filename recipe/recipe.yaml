@@ -42,8 +42,20 @@ tests:
       imports:
         - mosaic
       pip_check: true
-
       python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pytest
+        - pytest-timeout
+        - networkx
+        - hypothesis
+    files:
+      source:
+        - tests/
+    script:
+      - pytest tests/
+
 about:
   summary: Graphics package for MPAS meshes
   license: BSD-3-Clause
