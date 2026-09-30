@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools >=60
+    - setuptools
   run:
     - python >=${{ python_min }}
     - cartopy >=0.26.0
