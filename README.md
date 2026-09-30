@@ -20,7 +20,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/mosaic-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/mosaic-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -42,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mosaic` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install mosaic
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install mosaic
 ```
 
-It is possible to list all of the versions of `mosaic` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add mosaic
+# for installing globally
+pixi global install mosaic
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `mosaic` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search mosaic --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search mosaic --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search mosaic --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -78,6 +122,8 @@ mamba repoquery whoneeds mosaic --channel conda-forge
 # List dependencies of `mosaic`:
 mamba repoquery depends mosaic --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -148,7 +194,4 @@ Feedstock Maintainers
 
 * [@andrewdnolan](https://github.com/andrewdnolan/)
 * [@xylar](https://github.com/xylar/)
-
-
-<!-- dummy commit to enable rerendering -->
 
